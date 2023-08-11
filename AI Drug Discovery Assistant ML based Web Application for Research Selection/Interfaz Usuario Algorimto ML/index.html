@@ -1,0 +1,152 @@
+<!--Autor: ISAAC REYES-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Recomendación Híbrido para Descubrimiento de Fármacos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/MachineLearning.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!--Podemos añadir más paginas-->
+    <header>
+        <nav class="navbar">
+            <a href="https://fis.epn.edu.ec/index.php/es/" class="logo"><img src="img/EPN.jpg" alt="Logo de SRHDF"></a>
+            <ul class="menu">
+                <li><a href="index.html">Inicio Algoritmo Machine Learning</a></li>
+                <li><a href="#">Pagina Investigación Principal</a></li>
+                <li><a href="https://www.epn.edu.ec/">EPN</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="https://www.linkedin.com/in/isaac-reyes-358760141/">Contacto</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Titulo:-->
+        <section class="hero-section">
+            <h1>Sistema de Recomendación Híbrido para Descubrimiento de Fármacos</h1>
+            <p>Ingrese los valores requeridos de USURIO y los numéricos para el algoritmo de Machine Learning y haga clic en 'Ejecutar algoritmo' para obtener los resultados.</p>
+        </section>
+        <br>
+        <br>
+        <h6>Información Usuario:</h6>
+
+        <!--Carousel para imagenes NO NECESARIO-->
+        <!--
+        <section class="carousel">
+            <div class="carousel-inner">
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <div class="carousel-item">
+                    <img src="IMAGEN QUE SE VEA, ELECCION DEL INGENIERO">
+                </div>
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item">
+                    <img src="IMAGEN QUE SE VEA, ELECCION DEL INGENIERO">
+                </div>
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item">
+                    <img src="IMAGEN QUE SE VEA, ELECCION DEL INGENIERO">
+                </div>
+                <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                <label for="carousel-2" class="carousel-control next control-1">›</label>
+                <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                <label for="carousel-3" class="carousel-control next control-2">›</label>
+                <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                <label for="carousel-1" class="carousel-control next control-3">›</label>
+                <ol class="carousel-indicators">
+                    <li>
+                        <label for="carousel-1" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carousel-2" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carousel-3" class="carousel-bullet">•</label>
+                    </li>
+                </ol>
+            </div>
+        </section>-->
+
+
+        <!--Aqui se puede añadir mas de acuerdo a lo que se quiera para el USUARIO:-->
+        <section class="user-input-section">
+            <form id="userInfoForm">
+                <div class="form-group">
+                    <label for="userName">Nombre del usuario:</label>
+                    <input type="text" id="userName" name="userName" class="form-control" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="userEmail">Email del usuario:</label>
+                    <input type="email" id="userEmail" name="userEmail" class="form-control" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="userPhone">Teléfono del usuario:</label>
+                    <input type="tel" id="userPhone" name="userPhone" class="form-control" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="userAddress">Dirección del usuario:</label>
+                    <input type="text" id="userAddress" name="userAddress" class="form-control" required>
+                </div>
+        
+                <button type="submit" id="saveUserInfo" class="btn btn-primary">Guardar información</button>
+            </form>
+        </section>        
+
+        <!--Input ALGORITMO de MACHINE LEARNING:-->
+        <section class="input-section">
+            <form id="inputForm">
+                <div class="form-group2">
+                    <label for="value1">Valor 1:</label>
+                    <input type="number" id="value1" name="value1" required>
+                </div>
+
+                <div class="form-group2">
+                    <label for="value2">Valor 2:</label>
+                    <input type="number" id="value2" name="value2" required>
+                </div>
+
+                <button type="submit" id="runAlgorithm">Ejecutar algoritmo</button>
+            </form>
+        </section>
+        <!--Algoritmo resultados:-->
+        <section class="output-section">
+            <h2>Resultados</h2>
+            <div id="results"></div>
+            <section class="chart-section">
+                <canvas id="chart"></canvas>
+            </section>            
+        </section>
+    </main>
+    <!--footer:-->
+    <footer>
+        <p>&copy;2023 - Sistema de Recomendación Híbrido para Descubrimiento de Fármacos</p>
+        <p>&trade;Derechos Reservados - Página de Investigacion Ayudante</p>
+        Design by &reg;
+            <a href="mailto:isaac.reyes@epn.edu.ec?subject=Ayuda...!">IGRA</a>
+    </footer>
+
+    <!--Scripts:-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
